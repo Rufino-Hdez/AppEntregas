@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#37B7F1"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true">
+<!-- CONTENEDOR PRINCIPAL -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="25dp">
+
+    <!-- ESCANER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:baselineAligned="false"
+                android:gravity="center"
+                android:hint="CODIGO ESCANEADO"
+                android:inputType="number"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+            <!--app:layout_constraintTop_toBottomOf="@+id/textView"-->
+
+            <Button
+                android:id="@+id/btnScaner"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:layout_marginBottom="50px"
+                android:background="#2196F3"
+                android:text="Escanear codigo"
+                android:textColor="#070707"
+                app:layout_constraintTop_toBottomOf="@+id/etCodigo" />
+
+            <Button
+                android:id="@+id/btnConsulta"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="50px"
+                android:layout_marginBottom="50px"
+                android:background="#2196F3"
+                android:text="Consultar"
+                android:textColor="#070707"
+                app:layout_constraintTop_toBottomOf="@+id/etCodigo" />
+
+        </LinearLayout>
+
+    <!-- DATOS REMITENTE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DATOS DEL REMITENTE"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/Ed_name_remit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:hint="Nombre Remitente"
+                android:layout_gravity="center"/>
+            <EditText
+                android:id="@+id/Ed_address_remit"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:hint="Direccion Remitente"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    <!-- DATOS DESTINATARIO -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DATOS DEL DESTINATARIO"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+            <EditText
+                android:id="@+id/Ed_name_des"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:hint="Nombre Remitente"
+                android:layout_gravity="center"/>
+            <EditText
+                android:id="@+id/Ed_address_des"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:textSize="15dp"
+                android:hint="Direccion Remitente"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+    <!-- DATOS PAQUETE -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DATOS DEL PAQUETE"
+                android:textSize="15dp"
+                android:textAlignment="center"
+                android:gravity="center"/>
+
+        <!-- PAQ_DATOS HORIZONTAL CONTENEDOR HIJO-1-->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/Ed_P_Tipo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Tipo"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+                <EditText
+                    android:id="@+id/Ed_P_peso"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Peso"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+            </LinearLayout> <!-- END HIJO-1-->
+        <!-- PAQ_DATOS HORIZONTAL CONTENEDOR HIJO-1.1-->
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <EditText
+                    android:id="@+id/Ed_P_largo"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Largo"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+                <EditText
+                    android:id="@+id/Ed_P_alto"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Alto"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+                <EditText
+                    android:id="@+id/Ed_P_ancho"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:textSize="15dp"
+                    android:hint="Ancho"
+                    android:layout_gravity="center"
+                    android:textAlignment="center"/>
+            </LinearLayout> <!-- END HIJO-1.1-->
+
+        </LinearLayout> <!-- END DATOS PAQUETE-->
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp">
+
+            <Button
+                android:id="@+id/btnregistro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:layout_gravity="center"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout> <!-- END CONTENEDOR PRINCIPAL-->
+
+</ScrollView>
+
+</LinearLayout>
